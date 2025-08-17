@@ -1,10 +1,5 @@
 import pytest
 from unittest.mock import Mock
-from praktikum.burger import Burger
-
-@pytest.fixture()
-def burger():
-    return Burger()
 
 @pytest.fixture()
 def bun():
@@ -15,11 +10,11 @@ def bun():
 
 @pytest.fixture()
 def ingredient_sauce():
-    sause = Mock()
-    sause.get_type.return_value = "SAUCE"
-    sause.get_name.return_value = "Mayonez"
-    sause.get_price.return_value = 10.0
-    return sause
+    sauce = Mock()
+    sauce.get_type.return_value = "SAUCE"
+    sauce.get_name.return_value = "Mayonez"
+    sauce.get_price.return_value = 10.0
+    return sauce
 
 @pytest.fixture()
 def ingredient_fill():
